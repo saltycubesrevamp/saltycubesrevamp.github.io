@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "SonourousCustom";
+    src: local("sonourous"),
+    url("late2023saltycubes/Sonorous.otf");
+}
+
+body {
+  background-color: white;
+  transition: opacity 0.5s ease;
+}
+
+a {
+    color: #dedede;
+    font-weight: bolder;
+    font-family: "SonourousCustom", sonourous;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #b8b8b8;
+    letter-spacing: 1px;
+}
+
+bt {
+  font-size: 80px;
+  color: #dedede;
+  font-weight: bolder;
+  font-family: "SonourousCustom", sonourous;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #b8b8b8;
+  letter-spacing: 1px;
+}
+
+nt {
+  font-size: 20px;
+  color: #dedede;
+  font-weight: bolder;
+  font-family: "SonourousCustom", sonourous;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #b8b8b8;
+  letter-spacing: 1px;
+}
+
+game {
+  font-size: 30px;
+  font-family: "SonourousCustom", sonourous;
+  color: white;
+}
+
+button {
+  font-family: "SonourousCustom", sonourous;
+  padding: 10px 10px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #dedede;
+  border: 5px solid #b8b8b8;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #b8b8b8;
+}

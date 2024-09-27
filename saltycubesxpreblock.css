@@ -1,0 +1,32 @@
+body {
+  background-image: url('originalsaltycubes/background.png');
+  transition: opacity 0.5s ease;
+}
+
+bt {
+  font-size: 80px;
+  font-family: monospace;
+}
+
+nt {
+  font-size: 20px;
+  font-family: monospace;
+}
+
+game {
+  font-size: 25px;
+  font-family: monospace;
+  color: white;
+}
+
+button {
+  font-family: monospace;
+  padding: 10px 10px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  background-color: #e8e8e8;
+  border: 5px solid #f5f5f5;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
