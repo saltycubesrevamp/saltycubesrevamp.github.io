@@ -1,5 +1,5 @@
 const stylesheets = ['main.css', 'originalsaltycubes.css', 'late2023saltycubes.css', 'saltycubesxpreblock.css', 'preblock.css'];
-const themeNames = ['Salty Cubes Revamp/Main', 'Original Salty Cubes', 'Late 2023 Salty Cubes', 'Salty Cubes X Preblock', 'Preblock'];
+const themeNames = ['Theme - Salty Cubes Revamp/Main', 'Theme - Original Salty Cubes', 'Theme - Late 2023 Salty Cubes', 'Theme - Salty Cubes X Preblock', 'Theme - Preblock'];
 const favicons = ['images/favicon.png', 'originalsaltycubes/favicon.png', 'late2023saltycubes/favicon.png', 'saltycubesxpreblock/logo.png', 'preblock/favicon.png'];
 const images = ['images/logo.png', 'originalsaltycubes/logo.png', 'late2023saltycubes/logo.png', 'saltycubesxpreblock/logo.png', 'image5.jpg'];
 const bottomRightImage = 'saltycubesxpreblock/back.png';
@@ -8,6 +8,12 @@ const audioSrc3 = 'saltycubesxpreblock/music.mp3'; // Audio for index 3
 const audioSrc4 = 'preblock/music.mp3'; // Audio for index 4
 let currentStylesheetIndex = 0;
 
+// Load the current index from localStorage
+const savedIndex = localStorage.getItem('currentStylesheetIndex');
+if (savedIndex !== null) {
+    currentStylesheetIndex = parseInt(savedIndex, 10);
+}
+
 var a = document.getElementById("bottomRightImage");
 a.onclick = function() {
     alert("nah");
@@ -15,6 +21,7 @@ a.onclick = function() {
 
 function switchStylesheet() {
     currentStylesheetIndex = (currentStylesheetIndex + 1) % stylesheets.length;
+    localStorage.setItem('currentStylesheetIndex', currentStylesheetIndex); // Save the index to localStorage
     const stylesheet = document.getElementById('stylesheet');
     stylesheet.setAttribute('href', stylesheets[currentStylesheetIndex]);
     updateThemeDisplay();
@@ -83,22 +90,9 @@ function updateAudio() {
     }
 }
 
-var b = document.getElementById("securemode");
-b.onclick = function() {
-  win = window.open();
-  win.document.title = "Salty Cube's Revamp"
-  win.document.body.style.margin = "0%";
-  win.document.body.style.height = "100%";
-  var iframe = win.document.createElement("iframe");
-  iframe.style.border = "none";
-  iframe.style.width = "100%";
-  iframe.style.height = "100%";
-  iframe.style.margin = "0";
-  iframe.src = "https://saltycubesrevamp.github.io/";
-  win.document.body.appendChild(iframe);
-}
-
 window.onload = function() {
+    const stylesheet = document.getElementById('stylesheet');
+    stylesheet.setAttribute('href', stylesheets[currentStylesheetIndex]); // Load saved stylesheet
     updateThemeDisplay();
     updateFavicon();
     updateImage();
