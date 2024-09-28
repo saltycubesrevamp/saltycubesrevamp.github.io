@@ -20,6 +20,15 @@ body {
     font-family: monospace;
     color: white;
   }
+
+  a {
+    font-family: monospace;
+    color: white;
+  }
+
+  gamecolor {
+    color: red
+  }
   
   button {
     font-family: monospace;
