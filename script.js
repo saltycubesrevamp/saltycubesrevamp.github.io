@@ -117,4 +117,5 @@ window.onload = function() {
     updateImage();
     updateBottomRightImage();
     updateAudio();
+    savedIndex();
 };
