@@ -32,7 +32,7 @@ function switchStylesheet() {
 }
 
 function backToMainPage() {
-    window.location.href = 'index.html';
+    window.location.href = '/index.html'; // Send user to the main page
 }
 
 function updateThemeDisplay() {
@@ -117,5 +117,4 @@ window.onload = function() {
     updateImage();
     updateBottomRightImage();
     updateAudio();
-    savedIndex();
 };
